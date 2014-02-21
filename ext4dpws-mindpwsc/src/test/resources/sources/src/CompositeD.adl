@@ -1,0 +1,27 @@
+@Singleton
+composite CompositeD{
+
+	provides boot.Main as main;
+	
+	@RemoteInterface
+	provides org.ow2.mind.extensions.ext4dpws.ServiceA as service_a;
+	
+	@RemoteInterface
+	provides org.ow2.mind.extensions.ext4dpws.ServiceA as service_a2;	
+			
+	@RemoteReference
+	requires org.ow2.mind.extensions.ext4dpws.ServiceB as itf_b;
+	
+	contains LComponentA as a1;
+	
+	contains LComponentB as b1;
+	
+	binds this.main to a1.main;
+	
+	binds this.service_a to a1.service_a;
+	
+	binds this.service_a2 to a1.service_a2;
+	
+	binds a1.itf_b to this.itf_b;
+
+}

@@ -1,0 +1,13 @@
+primitive ComponentE{
+
+  	provides boot.Main as main;
+
+	@RemoteReference
+	requires org.ow2.mind.extensions.ext4dpws.ServiceA as itf_a;
+
+	@RemoteReference
+	requires org.ow2.mind.extensions.ext4dpws.ServiceA as itf_a2;
+	
+	source ClientAMain.c;
+	
+}

@@ -1,0 +1,8 @@
+@Singleton
+primitive HComponentA extends MyType{
+	
+	source MyTypeServiceA.c
+	source MyTypeServiceA2.c
+	source ServiceAMain.c
+
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.ow2.mind.extensions.ext4dpws</groupId>
+	<artifactId>mind-ext4dpws</artifactId>
+	<version>0.1-alpha-6</version>
+	<name>Mind Extended for Web Services</name>
+	<packaging>pom</packaging>
+
+	<description>
+      Mind Extended for Web Service is an extension of the mind toolset for providing web services based communication between fractal component adding
+	  dynamic discovery (dpws).
+    </description>
+
+	<properties>
+		<project.inceptionYear>2010</project.inceptionYear>
+		<project.contributionYear>2014</project.contributionYear>
+
+		<mind-compiler.version>2.1-SNAPSHOT</mind-compiler.version>		
+		<dpwscore.version>2.2.0</dpwscore.version>
+		<mind-compiler.groupId>org.ow2.mind</mind-compiler.groupId>
+	</properties>
+
+	<licenses>
+		<license>
+			<name>LGPL</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+		</license>
+	</licenses>
+
+	<modules>
+		<module>ext4dpws-idl2wsdl</module>
+		<module>ext4dpws-wsdl2cpl</module>
+		<module>ext4dpws-adl-frontend</module>
+		<module>ext4dpws-mindpwsc</module>
+		<module>ext4dpws-common</module>
+	</modules>
+
+	<developers>
+		<developer>
+			<id>ecoly</id>
+			<name>Edine Coly</name>
+			<email>edine.coly@sogeti.com</email>
+			<organization>Sogeti High Tech</organization>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>${mind-compiler.groupId}</groupId>
+			<artifactId>mindc</artifactId>
+			<version>${mind-compiler.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<classifier>jdk15</classifier>
+			<version>5.8</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Use Java 1.5 -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>license</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.mycila.maven-license-plugin</groupId>
+						<artifactId>maven-license-plugin</artifactId>
+						<configuration>
+							<header>${basedir}/header.txt</header>
+							<failIfMissing>true</failIfMissing>
+							<aggregate>true</aggregate>
+							<properties>
+								<owner>Sogeti High Tech</owner>
+								<owner_year>${project.inceptionYear}</owner_year>
+								<contributor>Schneider-Electric</contributor>
+								<contributor_year>${project.contributionYear}</contributor_year>
+								<project.version>${project.version}</project.version>
+							</properties>
+							<includes>
+								<include>**/src/main/java/**</include>
+							</includes>
+							<excludes>
+								<exclude>LICENSE.txt</exclude>
+								<exclude>header.txt</exclude>
+							</excludes>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

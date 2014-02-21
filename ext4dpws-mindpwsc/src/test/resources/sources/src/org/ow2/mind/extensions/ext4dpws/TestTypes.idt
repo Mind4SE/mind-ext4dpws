@@ -1,0 +1,78 @@
+#ifndef ORG_OW2_MIND_EXTENSIONS_EXT4DPWS
+#define ORG_OW2_MIND_EXTENSIONS_EXT4DPWS
+#include "org/ow2/mind/extensions/ext4dpws/Arrays.idt"
+
+struct structA
+{
+	string msg;
+	int size;
+};
+
+struct structAA
+{
+	string msg;
+	int size;
+	float value;
+};
+
+struct structOfChar
+{
+	char m;
+	char i;
+	char n;
+	char d;
+	
+};
+
+struct structOfArray
+{
+	MindArrayOfInt *int_array; 	
+	MindArrayOfShort *short_array;
+};
+struct structB
+{
+	string msg;
+	int size;
+	long time;
+};
+
+struct structBB
+{
+	string msg;
+	int size;
+	long time;
+};
+
+struct structC
+{
+	string msg;
+	struct structB *b;
+	struct structBB *bb;
+};
+
+
+enum couleur {
+       vert,
+       jaune,
+       rouge
+};
+
+struct structD
+{
+	enum couleur c1;
+	enum couleur c2;	
+	enum couleur c3;
+};
+
+struct structE
+{
+	string msg;
+	struct structB *b;
+	struct structBB *bb;
+	enum couleur c1;
+	enum couleur c2;	
+	enum couleur c3;
+};
+
+
+#endif

@@ -1,0 +1,60 @@
+@DeploymentArchitecture
+@Singleton
+composite DeploymentArchitectureG {
+
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="FoxBoardARM",
+  	execName="clientA1_G",
+  	serverPort="6541"
+  )
+  contains ClientA as client_a;
+  
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="GumstixARM",
+  	execName="serviceA1_G",
+  	serverPort="6542"
+  
+  )
+  contains RComponentA as cptA1; 
+  
+  
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="GumstixARM",
+  	execName="serviceA2_G",
+  	serverPort="6543"
+  
+  )
+  contains RComponentA as cptA2; 
+  
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="FoxBoardARM",
+  	execName="serviceB1_G",
+  	serverPort="6544"
+  )
+  contains ComponentB as cptB1;
+  
+  
+  @RemoteBinding
+  binds client_a.itf_a to cptA1.service_a;  
+
+  @RemoteBinding
+  binds client_a.itf_a2 to cptA2.service_a2;
+  
+  @RemoteBinding
+  binds cptA1.itf_b to cptB1.service_b;
+  
+  @RemoteBinding
+  binds cptA1.itf_b2 to cptB1.service_b;
+  
+  @RemoteBinding
+  binds cptA2.itf_b to cptB1.service_b;
+  
+  @RemoteBinding
+  binds cptA2.itf_b2 to cptB1.service_b;
+  
+  
+}

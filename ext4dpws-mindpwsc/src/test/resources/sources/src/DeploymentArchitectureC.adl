@@ -1,0 +1,29 @@
+@DeploymentArchitecture
+@Singleton
+composite DeploymentArchitectureC {
+
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="FoxBoardARM",
+  	execName="clientC1_C",
+  	serverPort="6545"
+  )
+  contains ClientA as client_a;
+  
+ 
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="GumstixARM",
+  	execName="serviceC1_C",
+  	serverPort="6546"
+  
+  )
+  contains MyTypeImpl<HComponentA> as cptA1;   
+  
+  @RemoteBinding
+  binds client_a.itf_a to cptA1.service_a;  
+
+  @RemoteBinding
+  binds client_a.itf_a2 to cptA1.service_a2;
+
+}

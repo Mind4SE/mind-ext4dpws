@@ -1,0 +1,7 @@
+@Singleton
+primitive boot.Bootstrap {
+
+  requires boot.Main as entryPoint;
+  
+  source bootstrap.c
+}

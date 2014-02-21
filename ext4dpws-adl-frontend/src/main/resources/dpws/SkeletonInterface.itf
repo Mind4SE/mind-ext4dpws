@@ -1,0 +1,11 @@
+interface dpws.SkeletonInterface{
+
+	void *getCallBack();
+	
+	const char* getServiceId();
+	
+	void *getPortType();//todo typer retour
+	
+	void *getWSDLInfo();//todo typer retour  
+ 
+}

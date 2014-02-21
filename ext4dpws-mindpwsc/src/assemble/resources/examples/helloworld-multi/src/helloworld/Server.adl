@@ -1,0 +1,12 @@
+@Singleton
+primitive helloworld.Server {
+  
+  provides boot.Main as main;
+   
+  @RemoteInterface
+  provides Service as s ;
+  
+  attribute int count = 2;
+  
+  source server.c;
+}

@@ -1,0 +1,8 @@
+interface dpws.BootstrapItf {
+
+ int registerService(const void* cbk,
+ 					 const char *serviceId, 
+ 					 void *portType, 
+ 					 void *wsdlInfo); 
+ 
+}

@@ -1,0 +1,1 @@
+<wsdl:output message="$PREFIX$:$NAME$RespMsg" />

@@ -1,0 +1,17 @@
+@Singleton
+primitive LComponentA{
+
+	provides boot.Main as main;
+	
+	provides org.ow2.mind.extensions.ext4dpws.ServiceA as service_a;
+	
+	provides org.ow2.mind.extensions.ext4dpws.ServiceA as service_a2;		
+	
+	@RemoteReference
+	requires org.ow2.mind.extensions.ext4dpws.ServiceB as itf_b;
+	
+	source ServiceA.c
+	source ServiceA2.c
+	source ServiceAMain.c
+
+}

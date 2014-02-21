@@ -1,0 +1,10 @@
+#ifndef MINDEXT4DPWS_ERRORS
+#define MINDEXT4DPWS_ERRORS
+struct ext4dpws_error_struct {
+	int err;
+	string msg;
+};
+
+typedef struct ext4dpws_error_struct ext4dpws_error;
+
+#endif

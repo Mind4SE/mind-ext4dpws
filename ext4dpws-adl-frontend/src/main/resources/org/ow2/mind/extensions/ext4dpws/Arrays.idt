@@ -1,0 +1,34 @@
+#ifndef MIND_ARRAYS
+#define MIND_ARRAYS
+
+typedef struct {
+	int *data;
+	int size;
+}MindArrayOfInt;
+
+typedef struct {
+	short *data;
+	int size;
+}MindArrayOfShort;
+
+typedef struct {
+	float *data;
+	int size;
+}MindArrayOfFloat;
+
+typedef struct {
+	char *data;
+	int size;
+}MindArrayOfChar;
+
+typedef struct {
+	long *data;
+	int size;
+}MindArrayOfLong;
+
+typedef struct {
+	string *data;
+	int size;
+}MindArrayOfString;
+
+#endif

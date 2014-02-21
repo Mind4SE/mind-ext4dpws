@@ -1,0 +1,93 @@
+#include "org/ow2/mind/extensions/ext4dpws/Errors.idt"
+#include "org/ow2/mind/extensions/ext4dpws/TestTypes.idt"
+
+interface org.ow2.mind.extensions.ext4dpws.ServiceA {
+   
+  void test01();  
+  
+  void test02(int a);
+  
+  void test03(out int a);
+  
+  void test04(in out int a);  
+    
+  void test05(out int a, out int b, out int c);    
+  
+  void test06(in out int a,int b, out int c);
+  
+  void test07(out MindArrayOfInt array);  
+  
+  void test08(in out MindArrayOfInt array);  
+  
+  void test09(in out MindArrayOfInt inoutarray, out MindArrayOfInt outarray);  
+  
+  void test10(out double a);
+  
+  void test11(in out int a, in out int b);
+  
+  void test12(out short a, out short b);
+  
+  void test13(string msg);  
+  
+  void test15(out string msg);
+  
+  void test16(struct structA a); 
+  
+  void test17(struct structA a, struct structA b); 
+  
+  void test18(out string msga, out string msgb, out string msgc); 
+    
+  void test20(in out string msg);
+  
+  void test21(MindArrayOfInt array);  
+  
+  void test22(in out string  inoutmsg, out string outmsg, in out MindArrayOfInt inoutarray, out MindArrayOfInt outarray);  
+ 
+  void test23(MindArrayOfShort array);
+  
+  void test24(out int  outint, in out MindArrayOfInt inoutarray, out MindArrayOfInt outarray);  
+  
+  void test25(MindArrayOfFloat array);
+  
+  void test27(MindArrayOfChar array);
+  
+  void test31(struct structOfArray a);  
+  
+  void test32(MindArrayOfLong array);  
+  
+  void test33(out enum couleur c1, out enum couleur c2, out enum couleur c3, out enum couleur c4);  
+    
+  void test34(struct structD a);      
+  
+  void test35(in out enum couleur c1, in out enum couleur c2, in out enum couleur c3, in out enum couleur c4);
+  
+  void test36(struct structAA aa); 
+  
+  void test37(struct structOfChar cc);
+  
+  void test38(struct structE ee);  
+  
+  void test39(out struct structAA aa);  
+  
+  void test40(out struct structE ee);   
+  
+  void test41(MindArrayOfString array);  
+  
+  void test42(out MindArrayOfString array);  
+  
+  void test43(struct structA **a);  
+  
+  void test44(MindArrayOfString array_a,MindArrayOfString array_b); 
+  
+  void test45(in out MindArrayOfString array);  
+  
+  void test46(struct structAA **a);  
+  
+  void test47(struct structOfChar **c); 
+  
+  void test48(struct structA **a,struct structAA **aa,struct structOfChar **c); 
+  
+  //void test49(out struct structA **a);   
+  
+};
+

@@ -1,0 +1,13 @@
+@DeploymentArchitecture
+@Singleton
+composite DeploymentArchitectureF {
+
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="GumstixARM",
+  	execName="serviceB3_F",
+  	serverPort="6540"
+  )
+  contains ComponentB as cptB1; 
+  
+ }

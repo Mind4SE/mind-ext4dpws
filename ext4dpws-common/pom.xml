@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<parent>
+		<artifactId>mind-ext4dpws</artifactId>
+		<groupId>org.ow2.mind.extensions.ext4dpws</groupId>
+		<version>0.1-alpha-6</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ext4dpws-common</artifactId>
+	<name>ext4dpws-common</name>
+	<version>0.1-alpha-6</version>
+
+	<profiles>
+		<profile>
+			<id>license</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.mycila.maven-license-plugin</groupId>
+						<artifactId>maven-license-plugin</artifactId>
+						<configuration>
+							<excludes>
+								<exclude>LICENSE.txt</exclude>
+								<exclude>header.txt</exclude>
+								<exclude>src/main/java/org/ow2/mind/extensions/ext4dpws/common/RandomGUID.java</exclude>
+								<exclude>src/main/java/org/ow2/mind/extensions/ext4dpws/common/ProcessLauncher.java</exclude>
+							</excludes>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

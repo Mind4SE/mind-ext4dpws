@@ -1,0 +1,21 @@
+primitive RComponentA{
+
+	provides boot.Main as main;
+	
+	@RemoteInterface
+	provides org.ow2.mind.extensions.ext4dpws.ServiceA as service_a;
+	
+	@RemoteInterface
+	provides org.ow2.mind.extensions.ext4dpws.ServiceA as service_a2;
+		
+	@RemoteReference
+	requires org.ow2.mind.extensions.ext4dpws.ServiceB as itf_b;
+	
+	@RemoteReference
+  	requires org.ow2.mind.extensions.ext4dpws.ServiceB as itf_b2;
+  	  	
+	source ServiceA.c
+	source ServiceA2.c
+	source ServiceAMain.c
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<parent>
+		<artifactId>mind-ext4dpws</artifactId>
+		<groupId>org.ow2.mind.extensions.ext4dpws</groupId>
+		<version>0.1-alpha-6</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ext4dpws-adl-frontend</artifactId>
+	<name>Ext4DPWS ADL Frontend</name>
+	<version>0.1-alpha-6</version>
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ext4dpws-wsdl2cpl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ext4dpws-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>**/**</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+</project>

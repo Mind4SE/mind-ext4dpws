@@ -1,0 +1,10 @@
+@Singleton
+primitive LComponentB{
+	
+	provides org.ow2.mind.extensions.ext4dpws.ServiceB as service_b;
+
+	source ServiceB.c
+
+
+
+}

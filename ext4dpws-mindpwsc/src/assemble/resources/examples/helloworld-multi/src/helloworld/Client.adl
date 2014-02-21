@@ -1,0 +1,10 @@
+import boot.Main;
+primitive helloworld.Client {
+  
+  provides Main as main;
+  
+  @RemoteReference
+  requires Service as sa;
+  
+  source client.c;
+}

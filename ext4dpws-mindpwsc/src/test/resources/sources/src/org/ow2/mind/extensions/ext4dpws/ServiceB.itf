@@ -1,0 +1,15 @@
+#include "org/ow2/mind/extensions/ext4dpws/Errors.idt"
+#include "org/ow2/mind/extensions/ext4dpws/TestTypes.idt"
+interface org.ow2.mind.extensions.ext4dpws.ServiceB {
+  
+  void test01(struct structB a, struct structB b,out string outmsga, out string outmsgb, out string outmsgc,in out string inoutmsga, in out string inoutmsgb, in out string inoutmsgc);
+  
+  void test03(struct structB b); 
+  
+  void test04(struct structC c);  
+    
+  void test06(enum couleur c);  
+  
+  void test08(enum couleur c1, enum couleur c2, enum couleur c3, enum couleur c4);  
+  
+}

@@ -1,0 +1,23 @@
+@DeploymentArchitecture
+composite helloworld.DistributedHelloWorldApp {
+
+ @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor", //mandatory (provided by the extension)
+  	userDescriptor="HelloWorldDPWSConf", //mandatory (should be provided by the developer)
+  	execName="hwClient" //mandatory
+  )
+  contains helloworld.Client as hwClient;
+  
+ 
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",//mandatory (provided by the extension)
+  	userDescriptor="HelloWorldDPWSConf", //mandatory (should be provided by the developer)
+  	execName="hwServer", //mandatory
+  	serverPort="6550" //optional (default is 9867)
+  )
+  contains helloworld.Server as hwServer; 
+  
+  @RemoteBinding
+  binds hwClient.sa to hwServer.s;
+  
+ }

@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.ow2.mind.extensions.ext4dpws</groupId>
+		<artifactId>mind-ext4dpws</artifactId>
+		<version>0.1-alpha-6</version>
+	</parent>
+
+	<artifactId>ext4dpws-wsdl2cpl</artifactId>
+	<name>WSDL2CPL Module</name>
+	<version>0.1-alpha-6</version>
+	<description>Part of stubs and skeleton generation.</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ext4dpws-idl2wsdl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ext4dpws-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<resources>
+		<resource>
+			<directory>${basedir}/src/main/resources</directory>
+			<includes>
+				<include>*.st</include>
+			</includes>
+			<targetPath>org/ow2/mind/extensions/ext4dpws/wsdl2cpl/templates</targetPath>
+		</resource>
+		<resource>
+			<directory>${basedir}/src/main/resources</directory>
+			<includes>
+				<include>log4j.properties</include>
+			</includes>
+		</resource>
+	</resources>		
+	</build>
+</project>

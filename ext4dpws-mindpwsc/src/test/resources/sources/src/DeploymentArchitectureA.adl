@@ -1,0 +1,44 @@
+@DeploymentArchitecture
+@Singleton
+composite DeploymentArchitectureA {
+
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="Clienti686",
+  	execName="clientA1_A",
+  	serverPort="6533"
+  )
+  contains ClientA as client_a;
+  
+ 
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="Clienti686",
+  	execName="serviceA1_A",
+  	serverPort="6534"
+  
+  )
+  contains RComponentA as cptA1; 
+  
+   
+  @DeploymentUnit(
+  	dpwsDescriptor="dpws.target.gnu.linux.Descriptor",
+  	userDescriptor="Clienti686",
+  	execName="serviceB1_A",
+  	serverPort="6536"
+  )
+  contains ComponentB as cptB1;
+  
+  @RemoteBinding
+  binds client_a.itf_a to cptA1.service_a;  
+
+  @RemoteBinding
+  binds client_a.itf_a2 to cptA1.service_a2;
+  
+  @RemoteBinding
+  binds cptA1.itf_b to cptB1.service_b;
+  
+  @RemoteBinding
+  binds cptA1.itf_b2 to cptB1.service_b;
+  
+}
