@@ -10,3 +10,5 @@ pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.next
 release.properties
+# Exclusion from the Maven "target/" case that led to ignoring crucial files
+!ext4dpws-adl-frontend/src/main/java/resources/dpws/target/
