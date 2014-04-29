@@ -5,10 +5,12 @@
 *.war
 *.ear
 # Maven #
-target/
+ext4dpws-adl-frontend/target/
+ext4dpws-common/target/
+ext4dpws-idl2wsdl/target/
+ext4dpws-mindpwsc/target/
+ext4dpws-wsdl2cpl/target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.next
 release.properties
-# Exclusion from the Maven "target/" case that led to ignoring crucial files
-!ext4dpws-adl-frontend/src/main/java/resources/dpws/target/
